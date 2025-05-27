@@ -45,6 +45,7 @@ const VoiceToText = ({ onEvaluationComplete }) => {
 
   const evaluateAnswerWithGPT = async (answerText) => {
     const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
+    console.log("OPENAI_API_KEY:", OPENAI_API_KEY);
 
     try {
       const response = await fetch('https://api.openai.com/v1/chat/completions', {
