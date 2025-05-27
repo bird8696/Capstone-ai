@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./components/qnaPage.module.css"; 
+import styles from "./components/QnaPage.module.css"; 
 
 const QnaPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
