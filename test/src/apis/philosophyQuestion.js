@@ -1,4 +1,4 @@
-// src/api/philosophyQuestion.js
+// src/apis/philosophyQuestion.js
 
 /**
  * POST /api/philosophy-question 호출하여 회사 철학 질문 생성
@@ -6,7 +6,9 @@
  * @returns {Promise<string>} - 생성된 질문 문자열
  */
 export const generateCompanyPhilosophyQuestionAPI = async (introText) => {
-  const res = await fetch("http://localhost:3001/api/philosophy-question", {
+  const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
+
+  const res = await fetch(`${BASE_URL}/api/philosophy-question`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -16,7 +18,6 @@ export const generateCompanyPhilosophyQuestionAPI = async (introText) => {
 
   // 에러 응답 처리
   if (!res.ok) {
-    // JSON 에러 메시지가 아닐 수 있으니 파싱 시도
     const errData = await res.json().catch(() => ({}));
     const msg = errData.error || `philosophy-question 요청 실패: ${res.status}`;
     throw new Error(msg);
