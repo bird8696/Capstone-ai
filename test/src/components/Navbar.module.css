@@ -1,0 +1,62 @@
+/* Navbar.module.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #141414;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.navbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navLinks {
+  display: flex;
+  gap: 24px;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navLinks a:hover {
+  color: #1e90ff;
+}
+
+.navbarRight {
+  display: flex;
+  gap: 12px;
+}
+
+.authButton {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  border: 1px solid #1e90ff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.authButton:hover {
+  background-color: #1e90ff;
+  transition: 0.3s ease;
+}

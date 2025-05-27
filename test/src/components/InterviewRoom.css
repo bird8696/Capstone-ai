@@ -1,0 +1,147 @@
+/* interview-room의 스타일 수정 */
+.interview-room {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 110px;
+  position: relative; /* interview-room에 relative 추가 */
+}
+
+.ai-section,
+.user-section {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ai-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-wrapper {
+  width: 500px;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+.avatar-gif {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.user-video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+}
+
+.question {
+  font-size: 18px;
+  margin: 20px 0;
+  text-align: center;
+  color: #333;
+}
+
+/* 타이머 위치를 버튼 위로 배치 */
+.timer-circle {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #3498db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.progress-ring__circle {
+  stroke: #fff;
+}
+
+.timer-text {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* 버튼들의 위치를 조정 */
+.stt-button-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px; /* 버튼 간격 */
+  flex-direction: column; /* 세로 방향으로 버튼 배치 */
+  align-items: center; /* 버튼들을 중앙 정렬 */
+  margin-top: 350px; /* 타이머와 버튼을 떨어뜨리기 위해 여백 추가 */
+}
+
+/* 버튼 스타일 */
+.voice-button {
+  padding: 0px 12px;
+  font-size: 14px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 50px;
+}
+
+.voice-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.voice-button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+/* 고개 끄덕임 스타일 */
+.nod-warning {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%); /* ⬅ 중앙 정렬 핵심 */
+  background-color: #fffbe6;
+  color: #664d03;
+  border: 1px solid #ffe58f;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: fadeout 1s ease-in-out 2s forwards;
+}
+
+/* 고개 끄덕임 스타일2 */
+@keyframes fadeout {
+  0% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
