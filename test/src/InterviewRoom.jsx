@@ -247,14 +247,23 @@ const InterviewRoom = () => {
         />
         <h3>지원자</h3>
       </div>
-
-      <div className="nonverbal-section">
-        <h4>실시간 고개 끄덕임 횟수</h4>
-        <p>{nods} 회</p>
+      
+      <div
+        className="timer-box"
+        style={{ "--timer-progress": `${(timeLeft / 90) * 100}%` }}
+      >
+        <div className="timer-text1">
+          {Math.floor(timeLeft / 60)}:{String(timeLeft % 60).padStart(2, "0")}
+        </div>
       </div>
 
+
+
+
+    
+
       <div className="timer-circle">
-        <svg className="progress-ring" width="120" height="120">
+        <svg className="progress-ring">
           <circle
             className="progress-ring__circle"
             stroke="white"
@@ -273,7 +282,15 @@ const InterviewRoom = () => {
         <div className="timer-text">
           {Math.floor(timeLeft / 60)}:{String(timeLeft % 60).padStart(2, "0")}
         </div>
+        
+        
       </div>
+        
+
+      
+
+
+
 
       <div className="stt-button-row">
         <button

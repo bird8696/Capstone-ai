@@ -33,7 +33,7 @@ body {
 }
 
 .aboutContent section {
-  background-color: #3a3a3a;
+  background-color: white;
   border-radius: 12px;
   padding: 20px 30px;
   margin-bottom: 30px;
@@ -54,13 +54,13 @@ body {
 .aboutContent p {
   font-size: 1rem;
   line-height: 1.7;
-  color: #ddd;
+  color: black;
 }
 
 .aboutContent ul {
   list-style-type: disc;
   padding-left: 20px;
-  color: #ccc;
+  color: black;
 }
 
 .aboutContent ul li {
